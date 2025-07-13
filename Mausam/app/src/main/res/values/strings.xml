@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Mausam</string>
+    <string name="city_name">New York</string>
+    <string name="clear">Clear</string>
+    <string name="feels_like">Feels like</string>
+    <string name="wind">Wind</string>
+    <string name="add_widget">Add Widget</string>
+    <string name="weather_map">Weather Map</string>
+    <string name="dark_theme">Dark Theme</string>
+    <string name="hourly_forecast">Hourly Forecast</string>
+    <string name="five_day_forecast">5-Day Forecast</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">Language</string>
+    <string name="action_settings">EN</string>
+    <string name="choose_mode">Choose a Mode</string>
+    <string name="choose_lan">Choose a Language</string>
+    <string name="enter_city_title">Enter City Name</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="city_not_available">This city is not available.</string>
+
+    <string name="label_language">Language</string>
+    <string name="switch_language">Switch Language</string>
+    <string name="label_theme">Theme</string>
+    <string name="label_units">Units</string>
+    <string name="unit_metric">Metric (°C, m/s)</string>
+    <string name="unit_imperial">Imperial (°F, mph)</string>
+
+    <string name="title">Mausam</string>
+    <string name="setting">Settings</string>
+    <string name="weather">Weather Map</string>
+    <string name="widget">Add Widget</string>
+    <string name="location">Change Location</string>
+
+</resources>

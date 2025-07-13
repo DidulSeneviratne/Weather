@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modes">
+        <item name="normal">साधारण</item>
+        <item name="standard">मानक</item>
+        <item name="telescope">दूरबीन</item>
+        <item name="night">रात</item>
+        <item name="digital">डिजिटल</item>
+        <item name="map">नक्शा</item>
+        <item name="map_satellite">मानचित्र उपग्रह</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item name="en">English</item>
+        <item name="hi">Hindi</item>
+    </string-array>
+
+    <string-array name="lancodes">
+        <item>en</item>
+        <item>hi</item>
+    </string-array>
+
+</resources>
