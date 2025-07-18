@@ -26,6 +26,15 @@
                 android:text="@string/title"/>
 
             <ImageButton
+                android:id="@+id/menu"
+                android:layout_margin="10dp"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:background="@drawable/menu"
+                android:layout_gravity="end"
+                android:contentDescription="TODO" />
+
+            <ImageButton
                 android:id="@+id/power"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
@@ -36,6 +45,15 @@
                 android:layout_gravity="end" />
 
             <ImageButton
+                android:id="@+id/expand"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_margin="10dp"
+                android:background="@drawable/square"
+                android:layout_gravity="end"
+                android:contentDescription="TODO" />
+
+            <!-- <ImageButton
                 android:id="@+id/widget"
                 android:layout_margin="10dp"
                 android:layout_width="20dp"
@@ -54,17 +72,18 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:layout_gravity="end" />
 
-            <ImageButton
-                android:id="@+id/refresh"
-                android:layout_margin="10dp"
+            <TextView
+                android:id="@+id/fab_lang"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="TODO"
-                android:src="@drawable/refresh1"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:layout_gravity="end" />
+                android:layout_margin="10dp"
+                android:text="हिंदी"
+                android:textColor="@color/white"
+                android:layout_gravity="end"
+                android:textStyle="bold"
+                android:textSize="16sp" /> -->
 
-            <ImageButton
+            <!--<ImageButton
                 android:id="@+id/btnChangeCity"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
@@ -72,16 +91,7 @@
                 android:src="@drawable/search1"
                 android:contentDescription="Change City"
                 android:background="?attr/selectableItemBackgroundBorderless"
-                android:layout_gravity="end" />
-
-            <ImageButton
-                android:id="@+id/menu"
-                android:layout_margin="10dp"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:background="@drawable/menu"
-                android:layout_gravity="end"
-                android:contentDescription="TODO" />
+                android:layout_gravity="end" />-->
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -101,29 +111,47 @@
                 android:paddingRight="20dp"
                 android:paddingTop="20dp">
 
-                <TextView
-                    android:id="@+id/textCity"
-                    android:layout_width="0dp"
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/input_layout_city"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="@string/city_name"
-                    android:textColor="@color/red"
-                    android:textSize="28sp"
-                    android:textStyle="bold" />
+                    android:hint="Search city"
+                    app:startIconDrawable="@drawable/search"
+                    app:endIconMode="clear_text"
+                    app:boxBackgroundMode="outline"
+                    app:boxCornerRadiusTopStart="8dp"
+                    app:boxCornerRadiusTopEnd="8dp"
+                    app:boxCornerRadiusBottomStart="8dp"
+                    app:boxCornerRadiusBottomEnd="8dp">
 
-                <!-- <ImageButton
-                    android:id="@+id/btnLanguage"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_menu_manage"
-                    android:background="?attr/selectableItemBackgroundBorderless" />
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/textCity"
+                        android:textSize="28sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/red"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/city_name"
+                        android:imeOptions="actionSearch"
+                        android:inputType="text" />
 
-                <ImageButton
-                    android:id="@+id/btnMenu"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@android:drawable/ic_menu_more"
-                    android:background="?attr/selectableItemBackgroundBorderless" />-->
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+        <!-- <ImageButton
+            android:id="@+id/btnLanguage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_manage"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+
+        <ImageButton
+            android:id="@+id/btnMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@android:drawable/ic_menu_more"
+            android:background="?attr/selectableItemBackgroundBorderless" />-->
 
             </LinearLayout>
 
@@ -131,7 +159,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="50dp"
+                android:layout_marginTop="95dp"
                 android:padding="20dp">
 
                 <TextView
@@ -170,6 +198,15 @@
                         android:layout_height="match_parent"
                         android:contentDescription="TODO"
                         android:scaleType="centerInside" />
+
+                    <ImageButton
+                        android:id="@+id/refresh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="TODO"
+                        android:src="@drawable/refresh1"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:layout_gravity="end|bottom" />
 
                 </LinearLayout>
 
@@ -220,7 +257,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerDaily"
                     android:layout_width="match_parent"
-                    android:layout_height="650dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:nestedScrollingEnabled="false"
                     android:overScrollMode="never" />
@@ -233,7 +270,7 @@
                     android:layout_marginTop="20dp"
                     tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                <!-- <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                     android:id="@+id/fab_lang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -242,7 +279,7 @@
                     android:backgroundTint="?attr/colorPrimary"
                     android:textColor="@color/white"
                     android:text="हिंदी"
-                    android:contentDescription="Change Language" />
+                    android:contentDescription="Change Language" /> -->
 
 
                 <!-- Add Weather-map Button -->
@@ -269,16 +306,17 @@
 
             </LinearLayout>
 
-            <com.google.android.gms.ads.AdView
-                android:id="@+id/adView"
-                android:layout_gravity="center"
-                android:gravity="bottom"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:adSize="BANNER"
-                app:adUnitId="@string/ads_banner_id" />
-
         </androidx.cardview.widget.CardView>
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_gravity="center"
+            android:gravity="bottom"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:adSize="BANNER"
+            app:adUnitId="@string/ads_banner_id" />
 
     </LinearLayout>
 

@@ -53,6 +53,26 @@
             android:text="Sat 12 July at 6:00 pm"
             android:textSize="14sp"
             android:textColor="#777777" />
+
+        <ImageView
+            android:id="@+id/widget_refresh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/refresh2"
+            android:contentDescription="Location" />
+
+        <!-- <ImageView
+            android:id="@+id/widget_refresh"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center_vertical"
+            android:src="@android:drawable/ic_menu_revert"
+            android:contentDescription="Refresh"
+            android:padding="4dp"
+            android:background="?attr/selectableItemBackgroundBorderless" /> -->
+
     </LinearLayout>
 
     <!-- Temperature and Icon -->

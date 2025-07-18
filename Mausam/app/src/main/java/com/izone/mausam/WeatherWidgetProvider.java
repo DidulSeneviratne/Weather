@@ -227,6 +227,7 @@ public class WeatherWidgetProvider extends AppWidgetProvider {
                         PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
                 views.setOnClickPendingIntent(R.id.widget_container, pendingIntent);
+                views.setOnClickPendingIntent(R.id.widget_refresh, pendingIntent);
                 appWidgetManager.updateAppWidget(widgetId, views);
             }
         }.execute(iconUrl);

@@ -1,5 +1,7 @@
 package com.izone.mausam.adapter;
 
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
 import com.izone.mausam.R;
@@ -28,9 +31,17 @@ public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     private final List<ForecastResponse.ForecastItem> forecastList;
     private NativeAd nativeAd; // you can set this from outside
+    private RecyclerView recyclerDaily;
+    private boolean showAd = true;
 
-    public DailyForecastAdapter(List<ForecastResponse.ForecastItem> forecastList) {
+    public void disableAd() {
+        this.showAd = false;
+        notifyDataSetChanged(); // Refresh list
+    }
+
+    public DailyForecastAdapter(List<ForecastResponse.ForecastItem> forecastList, RecyclerView recyclerDaily) {
         this.forecastList = forecastList;
+        this.recyclerDaily = recyclerDaily;
     }
 
     public void setNativeAd(NativeAd ad) {
@@ -40,12 +51,15 @@ public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.View
 
     @Override
     public int getItemCount() {
-        return forecastList.size() + 1; // one extra for ad
+        return forecastList.size() + (showAd && nativeAd != null ? 1 : 0); // one extra for ad
     }
 
     @Override
     public int getItemViewType(int position) {
-        return position == AD_POSITION ? VIEW_TYPE_AD : VIEW_TYPE_FORECAST;
+        if (showAd && nativeAd != null && position == AD_POSITION) {
+            return VIEW_TYPE_AD;
+        }
+        return VIEW_TYPE_FORECAST;
     }
 
     @NonNull
@@ -65,7 +79,7 @@ public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.View
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (getItemViewType(position) == VIEW_TYPE_AD) {
-            ((AdViewHolder) holder).bind(nativeAd);
+            ((AdViewHolder) holder).bind(nativeAd, recyclerDaily);
         } else {
             int realPosition = position > AD_POSITION ? position - 1 : position;
             ForecastResponse.ForecastItem item = forecastList.get(realPosition);
@@ -117,17 +131,19 @@ public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.View
     public static class AdViewHolder extends RecyclerView.ViewHolder {
         NativeAdView nativeAdView;
 
+
         public AdViewHolder(@NonNull View itemView) {
             super(itemView);
             nativeAdView = (NativeAdView) itemView;
         }
 
-        public void bind(NativeAd ad) {
+        public void bind(NativeAd ad, RecyclerView recyclerDaily) {
             if (ad == null) return;
 
             // Set up views based on your layout
             TextView headlineView = nativeAdView.findViewById(R.id.ad_headline);
             TextView bodyView = nativeAdView.findViewById(R.id.ad_body);
+            MediaView mediaView = nativeAdView.findViewById(R.id.ad_media);
 
             headlineView.setText(ad.getHeadline());
             nativeAdView.setHeadlineView(headlineView);
@@ -135,7 +151,9 @@ public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.View
             if (ad.getBody() != null) {
                 bodyView.setText(ad.getBody());
                 nativeAdView.setBodyView(bodyView);
+                nativeAdView.setMediaView(mediaView);
                 bodyView.setVisibility(View.VISIBLE);
+
             } else {
                 bodyView.setVisibility(View.GONE);
             }
