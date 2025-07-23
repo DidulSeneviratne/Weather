@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Küresel Hava</string>
+    <string name="city_name">New York</string>
+    <string name="clear">Açık</string>
+    <string name="feels_like">Hissedilen</string>
+    <string name="wind">Rüzgar</string>
+    <string name="add_widget">Widget Ekle</string>
+    <string name="weather_map">Hava Durumu Haritası</string>
+    <string name="dark_theme">Karanlık Tema</string>
+    <string name="hourly_forecast">Saatlik Tahmin</string>
+    <string name="five_day_forecast">5 Günlük Tahmin</string>
+    <string name="lang">Dil</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">Dil</string>
+    <string name="action_settings">TR</string>
+    <string name="choose_mode">Mod Seçin</string>
+    <string name="choose_lan">Dil Seçin</string>
+    <string name="enter_city_title">Şehir adını girin</string>
+    <string name="ok">Tamam</string>
+    <string name="cancel">İptal</string>
+    <string name="city_not_available">Bu şehir mevcut değil.</string>
+
+    <string name="label_language">Dil</string>
+    <string name="switch_language">Dili Değiştir</string>
+    <string name="label_theme">Tema</string>
+    <string name="label_units">Birimler</string>
+    <string name="unit_metric">Metrik (°C, m/s)</string>
+    <string name="unit_imperial">İngiliz sistemi (°F, mph)</string>
+
+    <string name="title">Küresel Hava</string>
+    <string name="setting">Ayarlar</string>
+    <string name="weather">Hava Durumu Haritası</string>
+    <string name="widget">Widget Ekle</string>
+    <string name="location">Konumu Değiştir</string>
+</resources>

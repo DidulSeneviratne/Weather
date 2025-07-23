@@ -44,16 +44,16 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:layout_gravity="end" />
 
-            <ImageButton
+            <!-- <ImageButton
                 android:id="@+id/expand"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
                 android:layout_margin="10dp"
                 android:background="@drawable/square"
                 android:layout_gravity="end"
-                android:contentDescription="TODO" />
+                android:contentDescription="TODO" /> -->
 
-            <!-- <ImageButton
+            <ImageButton
                 android:id="@+id/widget"
                 android:layout_margin="10dp"
                 android:layout_width="20dp"
@@ -81,7 +81,7 @@
                 android:textColor="@color/white"
                 android:layout_gravity="end"
                 android:textStyle="bold"
-                android:textSize="16sp" /> -->
+                android:textSize="16sp" />
 
             <!--<ImageButton
                 android:id="@+id/btnChangeCity"
@@ -281,28 +281,120 @@
                     android:text="हिंदी"
                     android:contentDescription="Change Language" /> -->
 
-
                 <!-- Add Weather-map Button -->
-                <Button
-                    android:id="@+id/btnAddMap"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/weather_map"
-                    android:textAllCaps="false"
-                    android:backgroundTint="@color/red"
-                    android:textColor="@android:color/white"
-                    android:layout_marginTop="20dp" />
 
-                <!-- Add Widget Button -->
-                <Button
-                    android:id="@+id/btnAddWidget"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="@string/add_widget"
-                    android:textAllCaps="false"
-                    android:backgroundTint="@color/red"
-                    android:textColor="@android:color/white"
-                    android:layout_marginTop="10dp" />
+                    android:layout_marginTop="20dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/btnLang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="15dp"
+                        android:background="@drawable/card_border1"
+                        android:layout_gravity="start"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/language" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/red"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/language"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnAddMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/card_border1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/map2" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/red"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/map"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnAddWidget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:background="@drawable/card_border1"
+                        android:layout_gravity="end"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/widget2"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:textColor="@color/red"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginBottom="5dp"
+                            android:text="@string/only_widget"/>
+
+                    </LinearLayout>
+
+                    <!-- <Button
+                        android:id="@+id/btnAddMap"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/weather_map"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/red"
+                        android:textColor="@android:color/white" /> -->
+
+                    <!-- Add Widget Button
+                    <Button
+                        android:id="@+id/btnAddWidget"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_gravity="end"
+                        android:text="@string/only_widget"
+                        android:textAllCaps="true"
+                        android:textSize="12sp"
+                        android:backgroundTint="@color/red"
+                        android:textColor="@android:color/white" /> -->
+
+                </LinearLayout>
 
             </LinearLayout>
 

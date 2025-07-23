@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Clima Global</string>
+    <string name="city_name">Nova Iorque</string>
+    <string name="clear">Limpo</string>
+    <string name="feels_like">Sensação térmica</string>
+    <string name="wind">Vento</string>
+    <string name="add_widget">Adicionar widget</string>
+    <string name="weather_map">Mapa do clima</string>
+    <string name="dark_theme">Tema escuro</string>
+    <string name="hourly_forecast">Previsão horária</string>
+    <string name="five_day_forecast">Previsão de 5 dias</string>
+    <string name="lang">Idioma</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">Idioma</string>
+    <string name="action_settings">PT</string>
+    <string name="choose_mode">Escolha um modo</string>
+    <string name="choose_lan">Escolha um idioma</string>
+    <string name="enter_city_title">Digite o nome da cidade</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancelar</string>
+    <string name="city_not_available">Esta cidade não está disponível.</string>
+
+    <string name="label_language">Idioma</string>
+    <string name="switch_language">Alterar idioma</string>
+    <string name="label_theme">Tema</string>
+    <string name="label_units">Unidades</string>
+    <string name="unit_metric">Métrico (°C, m/s)</string>
+    <string name="unit_imperial">Imperial (°F, mph)</string>
+
+    <string name="title">Clima Global</string>
+    <string name="setting">Configurações</string>
+    <string name="weather">Mapa do clima</string>
+    <string name="widget">Adicionar widget</string>
+    <string name="location">Alterar localização</string>
+</resources>

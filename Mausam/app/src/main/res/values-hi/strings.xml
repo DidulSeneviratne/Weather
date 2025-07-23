@@ -5,13 +5,17 @@
     <string name="feels_like">ऐसा लगता है</string>
     <string name="wind">पवन</string>
     <string name="add_widget">विजेट जोड़ें</string>
+    <string name="only_widget">विजेट</string>
     <string name="weather_map">मौसम मानचित्र</string>
+    <string name="map">मानचित्र</string>
     <string name="dark_theme">डार्क थीम</string>
     <string name="hourly_forecast">घंटेवार पूर्वानुमान</string>
     <string name="five_day_forecast">5-दिवसीय पूर्वानुमान</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="ads_native">ca-app-pub-1606200483291446/2190873399</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
     <string name="settings_title_language">Language</string>
     <string name="action_settings">Hi</string>
     <string name="enter_city_title">शहर का नाम दर्ज करें</string>
@@ -23,6 +27,7 @@
 
     <string name="label_language">भाषा</string>
     <string name="switch_language">भाषा बदलें</string>
+    <string name="language">भाषा</string>
     <string name="label_theme">थीम</string>
     <string name="label_units">इकाइयाँ</string>
     <string name="unit_metric">मेट्रिक (°C, m/s)</string>

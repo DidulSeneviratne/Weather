@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Clima Global</string>
+    <string name="city_name">Nueva York</string>
+    <string name="clear">Despejado</string>
+    <string name="feels_like">Sensación térmica</string>
+    <string name="wind">Viento</string>
+    <string name="add_widget">Agregar widget</string>
+    <string name="weather_map">Mapa del clima</string>
+    <string name="dark_theme">Tema oscuro</string>
+    <string name="hourly_forecast">Pronóstico por hora</string>
+    <string name="five_day_forecast">Pronóstico de 5 días</string>
+    <string name="lang">Idioma</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">Idioma</string>
+    <string name="action_settings">ES</string>
+    <string name="choose_mode">Elegir modo</string>
+    <string name="choose_lan">Elegir idioma</string>
+    <string name="enter_city_title">Ingrese el nombre de la ciudad</string>
+    <string name="ok">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="city_not_available">Esta ciudad no está disponible.</string>
+
+    <string name="label_language">Idioma</string>
+    <string name="switch_language">Cambiar idioma</string>
+    <string name="label_theme">Tema</string>
+    <string name="label_units">Unidades</string>
+    <string name="unit_metric">Métrico (°C, m/s)</string>
+    <string name="unit_imperial">Imperial (°F, mph)</string>
+
+    <string name="title">Clima Global</string>
+    <string name="setting">Configuración</string>
+    <string name="weather">Mapa del clima</string>
+    <string name="widget">Agregar widget</string>
+    <string name="location">Cambiar ubicación</string>
+</resources>

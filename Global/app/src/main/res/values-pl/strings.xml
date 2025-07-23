@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Pogoda Globalna</string>
+    <string name="city_name">Nowy Jork</string>
+    <string name="clear">Bezchmurnie</string>
+    <string name="feels_like">Odczuwalna</string>
+    <string name="wind">Wiatr</string>
+    <string name="add_widget">Dodaj widżet</string>
+    <string name="weather_map">Mapa pogodowa</string>
+    <string name="dark_theme">Tryb ciemny</string>
+    <string name="hourly_forecast">Prognoza godzinowa</string>
+    <string name="five_day_forecast">Prognoza 5-dniowa</string>
+    <string name="lang">Język</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">Język</string>
+    <string name="action_settings">PL</string>
+    <string name="choose_mode">Wybierz tryb</string>
+    <string name="choose_lan">Wybierz język</string>
+    <string name="enter_city_title">Wprowadź nazwę miasta</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Anuluj</string>
+    <string name="city_not_available">To miasto nie jest dostępne.</string>
+
+    <string name="label_language">Język</string>
+    <string name="switch_language">Zmień język</string>
+    <string name="label_theme">Motyw</string>
+    <string name="label_units">Jednostki</string>
+    <string name="unit_metric">Metryczne (°C, m/s)</string>
+    <string name="unit_imperial">Imperialne (°F, mph)</string>
+
+    <string name="title">Pogoda Globalna</string>
+    <string name="setting">Ustawienia</string>
+    <string name="weather">Mapa pogodowa</string>
+    <string name="widget">Dodaj widżet</string>
+    <string name="location">Zmień lokalizację</string>
+</resources>

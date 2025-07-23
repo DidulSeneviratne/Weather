@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">Globales Wetter</string>
+    <string name="city_name">New York</string>
+    <string name="clear">Klar</string>
+    <string name="feels_like">Gefühlt</string>
+    <string name="wind">Wind</string>
+    <string name="add_widget">Widget hinzufügen</string>
+    <string name="weather_map">Wetterkarte</string>
+    <string name="dark_theme">Dunkles Thema</string>
+    <string name="hourly_forecast">Stündliche Vorhersage</string>
+    <string name="five_day_forecast">5-Tage-Vorhersage</string>
+    <string name="lang">Sprache</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">Sprache</string>
+    <string name="action_settings">DE</string>
+    <string name="choose_mode">Modus wählen</string>
+    <string name="choose_lan">Sprache wählen</string>
+    <string name="enter_city_title">Stadtname eingeben</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="city_not_available">Diese Stadt ist nicht verfügbar.</string>
+
+    <string name="label_language">Sprache</string>
+    <string name="switch_language">Sprache wechseln</string>
+    <string name="label_theme">Thema</string>
+    <string name="label_units">Einheiten</string>
+    <string name="unit_metric">Metrisch (°C, m/s)</string>
+    <string name="unit_imperial">Imperial (°F, mph)</string>
+
+    <string name="title">Globales Wetter</string>
+    <string name="setting">Einstellungen</string>
+    <string name="weather">Wetterkarte</string>
+    <string name="widget">Widget hinzufügen</string>
+    <string name="location">Ort ändern</string>
+</resources>

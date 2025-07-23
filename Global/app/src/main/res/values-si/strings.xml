@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">ගෝලීය කාලගුණය</string>
+    <string name="city_name">නිව්යෝක්</string>
+    <string name="clear">පැහැදිලි</string>
+    <string name="feels_like">අනූවේ දැනෙන්නෙ</string>
+    <string name="wind">සුළං</string>
+    <string name="add_widget">විජට් එකක් එකතු කරන්න</string>
+    <string name="weather_map">කාලගුණ සිතියම</string>
+    <string name="dark_theme">අඳුරු තේමාව</string>
+    <string name="hourly_forecast">පැය අනූව පුරෝකථනය</string>
+    <string name="five_day_forecast">දින 5ක පුරෝකථනය</string>
+    <string name="lang">භාෂාව</string>
+
+    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="settings_title_language">භාෂාව</string>
+    <string name="action_settings">SI</string>
+    <string name="choose_mode">මෝඩ් එකක් තෝරන්න</string>
+    <string name="choose_lan">භාෂාව තෝරන්න</string>
+    <string name="enter_city_title">නගරයේ නම ඇතුලත් කරන්න</string>
+    <string name="ok">හරි</string>
+    <string name="cancel">අවලංගු කරන්න</string>
+    <string name="city_not_available">මෙම නගරය ලබා ගත නොහැක.</string>
+
+    <string name="label_language">භාෂාව</string>
+    <string name="switch_language">භාෂාව වෙනස් කරන්න</string>
+    <string name="label_theme">තේමාව</string>
+    <string name="label_units">ඒකක</string>
+    <string name="unit_metric">මැට්‍රික් (°C, m/s)</string>
+    <string name="unit_imperial">ඉම්පීරියල් (°F, mph)</string>
+
+    <string name="title">ගෝලීය කාලගුණය</string>
+    <string name="setting">සැකසුම්</string>
+    <string name="weather">කාලගුණ සිතියම</string>
+    <string name="widget">විජට් එකක් එකතු කරන්න</string>
+    <string name="location">ස්ථානය වෙනස් කරන්න</string>
+</resources>

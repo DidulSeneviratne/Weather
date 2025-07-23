@@ -6,12 +6,17 @@
     <string name="wind">Wind</string>
     <string name="add_widget">Add Widget</string>
     <string name="weather_map">Weather Map</string>
+    <string name="only_widget">Widget</string>
+    <string name="language">Language</string>
+    <string name="map">Map</string>
     <string name="dark_theme">Dark Theme</string>
     <string name="hourly_forecast">Hourly Forecast</string>
     <string name="five_day_forecast">5-Day Forecast</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="ads_native">ca-app-pub-1606200483291446/2190873399</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
     <string name="settings_title_language">Language</string>
     <string name="action_settings">EN</string>
     <string name="choose_mode">Choose a Mode</string>

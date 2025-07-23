@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.appopen.AppOpenAd;
+import com.izone.mausam.R;
 
 public class AppOpenAdManager {
     private AppOpenAd appOpenAd;
@@ -19,7 +20,7 @@ public class AppOpenAdManager {
 
     private void loadAd() {
         AdRequest request = new AdRequest.Builder().build();
-        AppOpenAd.load(application, "ca-app-pub-1606200483291446/9280424726", request,
+        AppOpenAd.load(application, application.getString(R.string.ads_open), request,
                 AppOpenAd.APP_OPEN_AD_ORIENTATION_PORTRAIT,
                 new AppOpenAd.AppOpenAdLoadCallback() {
                     @Override

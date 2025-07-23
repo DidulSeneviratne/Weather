@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modes">
+        <item name="normal">Normal</item>
+        <item name="standard">Standardmodus</item>
+        <item name="telescope">Teleskopmodus</item>
+        <item name="night">Nachtmodus</item>
+        <item name="digital">Digitalmodus</item>
+        <item name="map">Karte</item>
+        <item name="map_satellite">Satellitenkarte</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item name="en">English</item>
+        <item name="es">Spanish</item>
+        <item name="hi">Hindi</item>
+        <item name="ge">German</item>
+        <item name="pl">Polish</item>
+        <item name="pt">Portuguese</item>
+        <item name="ru">Russian</item>
+        <item name="si">Sinhala</item>
+        <item name="tr">Turkish</item>
+    </string-array>
+
+    <string-array name="lancodes">
+        <item>en</item>
+        <item>es</item>
+        <item>hi</item>
+        <item>ge</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>si</item>
+        <item>tr</item>
+    </string-array>
+
+</resources>

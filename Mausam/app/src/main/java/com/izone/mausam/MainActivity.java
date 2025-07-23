@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     TextView textTemperature, textCondition, textFeelsLike, textWind;
     TextInputEditText textCity;
     // ImageButton btnLanguage, btnMenu;
-    Button btnAddWidget, btnAddMap;
+    LinearLayout btnAddWidget, btnAddMap, btnLang;
     Switch switchTheme;
     RecyclerView recyclerHourly, recyclerDaily;
     ImageView imageWeatherIcon;
@@ -139,8 +139,12 @@ public class MainActivity extends AppCompatActivity {
         textWind = findViewById(R.id.textWind);
         /* btnLanguage = findViewById(R.id.btnLanguage);
         btnMenu = findViewById(R.id.btnMenu);*/
+        widget = findViewById(R.id.widget);
+        map = findViewById(R.id.map);
+        fabLang = findViewById(R.id.fab_lang);
         btnAddWidget = findViewById(R.id.btnAddWidget);
         btnAddMap = findViewById(R.id.btnAddMap);
+        btnLang = findViewById(R.id.btnLang);
         recyclerHourly = findViewById(R.id.recyclerHourly);
         recyclerDaily = findViewById(R.id.recyclerDaily);
         imageWeatherIcon = findViewById(R.id.imageWeatherIcon);
@@ -172,7 +176,7 @@ public class MainActivity extends AppCompatActivity {
             adView.setVisibility(View.GONE);
         } */
 
-        String lang = pref.getString("lang", "hi");
+        String lang = pref.getString("lang", "en");
         setLocale(lang);
 
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
@@ -204,9 +208,9 @@ public class MainActivity extends AppCompatActivity {
             recreate(); // Recreate activity to apply theme
         });
 
-        expandButton = findViewById(R.id.expand);
+        //expandButton = findViewById(R.id.expand);
 
-        expandButton.setOnClickListener(v -> {
+        /* expandButton.setOnClickListener(v -> {
             View popupView = getLayoutInflater().inflate(R.layout.popup_menu_layout, null);
             PopupWindow popupWindow = new PopupWindow(
                     popupView,
@@ -281,6 +285,60 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, WeatherMapActivity.class));
                 popupWindow.dismiss();
             });
+        }); */
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, WeatherMapActivity.class));
+            }
+        });
+
+        widget.setOnClickListener(view -> {
+            // Widget logic
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                AppWidgetManager appWidgetManager = getSystemService(AppWidgetManager.class);
+                ComponentName myProvider = new ComponentName(this, WeatherWidgetProvider.class);
+
+                if (appWidgetManager.isRequestPinAppWidgetSupported()) {
+                    appWidgetManager.requestPinAppWidget(myProvider, null, null);
+                    Toast.makeText(this, "Widget available for manual adding", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Widget pinning not supported on this device", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "Requires Android 8.0 or higher", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        SharedPreferences langPref = getSharedPreferences("settings", MODE_PRIVATE);
+        String currentLang = langPref.getString("lang", "en");
+        // Set next language label
+        switch (currentLang) {
+            case "en":
+                fabLang.setText("हिंदी");
+                break;
+            case "hi":
+                fabLang.setText("English");
+                break;
+        }
+        fabLang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String nextLang;
+                switch (currentLang) {
+                    case "en": nextLang = "hi"; break;
+                    case "hi": default: nextLang = "en"; break;
+                }
+
+                langPref.edit().putString("lang", nextLang).apply();
+                setAppLocale(nextLang);
+
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            }
         });
 
         refresh = findViewById(R.id.refresh);
@@ -291,7 +349,8 @@ public class MainActivity extends AppCompatActivity {
 
                 String city = textCity.getText().toString().trim();
                 if (!city.isEmpty()) {
-                    loadWeatherData(city); // your method
+                    String unit = getSharedPreferences("settings", MODE_PRIVATE).getString("units", "metric");
+                    loadWeatherData(city, unit); // your method
                 }
                 return true;
             }
@@ -347,7 +406,8 @@ public class MainActivity extends AppCompatActivity {
                         String city = input.getText().toString().trim();
                         try {
                             if (!city.isEmpty()) {
-                                loadWeatherData(city);
+                                String unit = getSharedPreferences("settings", MODE_PRIVATE).getString("units", "metric");
+                                loadWeatherData(city, unit);
                             }
                         }catch (Exception e){
                             Toast.makeText(this, getString(R.string.city_not_available), Toast.LENGTH_SHORT).show();
@@ -400,6 +460,19 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, WeatherMapActivity.class));
         });
 
+        btnLang.setOnClickListener(view -> {
+            String newLang = lang.equals("en") ? "hi" : "en";
+            prefs.edit().putString("lang", newLang).apply();
+
+            setAppLocale(newLang);
+
+            // Restart MainActivity to reflect changes globally
+            Intent intent = new Intent(MainActivity.this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(intent);
+            finish();
+        });
+
     }
 
     /* @Override
@@ -448,7 +521,8 @@ public class MainActivity extends AppCompatActivity {
                 loadWeatherDataByCoords(lat, lon, lan, unit);
 
             } else {
-                loadWeatherData("New York"); // fallback
+                String unit = getSharedPreferences("settings", MODE_PRIVATE).getString("units", "metric");
+                loadWeatherData("New York", unit); // fallback
             }
         });
     }
@@ -474,21 +548,22 @@ public class MainActivity extends AppCompatActivity {
 
     private void getCityFromLocation(Location location) {
         Geocoder geocoder = new Geocoder(this, Locale.getDefault());
+        String unit = getSharedPreferences("settings", MODE_PRIVATE).getString("units", "metric");
         try {
             List<Address> addresses = geocoder.getFromLocation(location.getLatitude(), location.getLongitude(), 1);
             if (addresses != null && !addresses.isEmpty()) {
                 String cityName = addresses.get(0).getLocality();
                 if (cityName != null) {
                     Log.d("city", cityName);
-                    loadWeatherData(cityName); // 🟩 Load weather for detected city
+                    loadWeatherData(cityName, unit); // 🟩 Load weather for detected city
                 } else {
                     Toast.makeText(this, "City not found. Defaulting to New York.", Toast.LENGTH_SHORT).show();
-                    loadWeatherData("Colombo");
+                    loadWeatherData("Colombo", unit);
                 }
             }
         } catch (Exception e) {
             e.printStackTrace();
-            loadWeatherData("Colombo");
+            loadWeatherData("Colombo", unit);
         }
     }
 
@@ -587,7 +662,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadNativeAd(DailyForecastAdapter adapter, RecyclerView recyclerDaily) {
-        AdLoader adLoader = new AdLoader.Builder(this, "ca-app-pub-1606200483291446/2190873399") // Replace with your real ad unit
+        AdLoader adLoader = new AdLoader.Builder(this, getString(R.string.ads_native)) // Replace with your real ad unit
                 .forNativeAd(nativeAd -> {
                     adapter.setNativeAd(nativeAd);// Inject into adapter
 
@@ -613,12 +688,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    private void loadWeatherData(String city) {
+    private void loadWeatherData(String city, String unit) {
         WeatherService service = ApiClient.getClient().create(WeatherService.class);
 
         String lang = getSharedPreferences("settings", MODE_PRIVATE).getString("lang", "en");
-        Call<WeatherResponse> call = service.getCurrentWeather(city, "4e0f642bc59577eadf094fa2366f5c1a", "metric", lang);
-        Call<ForecastResponse> call1 = service.getForecast(city, "4e0f642bc59577eadf094fa2366f5c1a", "metric", lang);
+        Call<WeatherResponse> call = service.getCurrentWeather(city, "4e0f642bc59577eadf094fa2366f5c1a", unit, lang);
+        Call<ForecastResponse> call1 = service.getForecast(city, "4e0f642bc59577eadf094fa2366f5c1a", unit, lang);
 
         call.enqueue(new Callback<WeatherResponse>() {
             @Override

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modes">
+        <item name="normal">Normalny</item>
+        <item name="standard">Tryb standardowy</item>
+        <item name="telescope">Tryb teleskopowy</item>
+        <item name="night">Tryb nocny</item>
+        <item name="digital">Tryb cyfrowy</item>
+        <item name="map">Mapa</item>
+        <item name="map_satellite">Mapa satelitarna</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item name="en">English</item>
+        <item name="es">Spanish</item>
+        <item name="hi">Hindi</item>
+        <item name="ge">German</item>
+        <item name="pl">Polish</item>
+        <item name="pt">Portuguese</item>
+        <item name="ru">Russian</item>
+        <item name="si">Sinhala</item>
+        <item name="tr">Turkish</item>
+    </string-array>
+
+    <string-array name="lancodes">
+        <item>en</item>
+        <item>es</item>
+        <item>hi</item>
+        <item>ge</item>
+        <item>pl</item>
+        <item>pt</item>
+        <item>ru</item>
+        <item>si</item>
+        <item>tr</item>
+    </string-array>
+
+</resources>

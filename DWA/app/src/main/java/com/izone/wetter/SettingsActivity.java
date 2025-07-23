@@ -3,6 +3,7 @@ package com.izone.wetter;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -10,6 +11,7 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.content.res.Configuration;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
@@ -40,11 +42,13 @@ public class SettingsActivity extends AppCompatActivity {
         prefs = getSharedPreferences("settings", MODE_PRIVATE);
 
         MobileAds.initialize(this, initializationStatus -> {});
+        // switchAds = findViewById(R.id.switchAds);
 
-        switchAds = findViewById(R.id.switchAds);
         adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
-        if (adView != null) {
+        /* if (adView != null) {
             if (prefs.getBoolean("ads_enabled", true)) {
                 adView.loadAd(new AdRequest.Builder().build());
             } else {
@@ -52,20 +56,20 @@ public class SettingsActivity extends AppCompatActivity {
             }
         } else {
             Log.e("SettingsActivity", "AdView not found in layout");
-        }
+        } */
 
 
-        // Set saved value
-        switchAds.setChecked(prefs.getBoolean("ads_enabled", true));
+        /* Set saved value
+        switchAds.setChecked(prefs.getBoolean("ads_enabled", true)); */
 
-        // Listen for changes
+        /* Listen for changes
         switchAds.setOnCheckedChangeListener((buttonView, isChecked) -> {
             SharedPreferences.Editor editor = prefs.edit();
             editor.putBoolean("ads_enabled", isChecked);
             editor.apply();
 
             Toast.makeText(this, "Ads " + (isChecked ? "enabled" : "disabled"), Toast.LENGTH_SHORT).show();
-        });
+        }); */
 
         // Apply theme before inflating layout
         boolean darkMode = prefs.getBoolean("dark_mode", false);
@@ -119,7 +123,7 @@ public class SettingsActivity extends AppCompatActivity {
 
         // Language switch logic
         btnLang.setOnClickListener(v -> {
-            String newLang = lang.equals("en") ? "ge" : "en";
+            String newLang = lang.equals("en") ? "hi" : "en";
             prefs.edit().putString("lang", newLang).apply();
 
             setAppLocale(newLang);

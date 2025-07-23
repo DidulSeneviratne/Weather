@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.Toolbar
@@ -95,22 +95,22 @@
                     android:text="@string/unit_imperial" />
             </RadioGroup>
 
-            <!-- Section Label -->
+            <!-- Section Label
             <TextView
                 android:layout_height="wrap_content"
                 android:layout_width="wrap_content"
                 android:text="Google Ads"
                 android:textSize="18sp"
                 android:layout_marginTop="20dp"
-                android:layout_marginBottom="10dp"/>
+                android:layout_marginBottom="10dp"/> -->
 
-            <!-- Toggle Switch to Enable/Disable Ads -->
+            <!-- Toggle Switch to Enable/Disable Ads
             <Switch
                 android:id="@+id/switchAds"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Enable Ads"
-                android:checked="true" />
+                android:checked="true" /> -->
 
         </LinearLayout>
 

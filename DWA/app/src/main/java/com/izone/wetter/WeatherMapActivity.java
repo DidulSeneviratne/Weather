@@ -9,6 +9,8 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -18,6 +20,14 @@ import androidx.appcompat.widget.Toolbar;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+
+import org.osmdroid.config.Configuration;
+import org.osmdroid.views.MapView;
+import org.osmdroid.tileprovider.MapTileProviderBasic;
+import org.osmdroid.tileprovider.modules.MapTileDownloader;
+import org.osmdroid.tileprovider.tilesource.XYTileSource;
+import org.osmdroid.util.GeoPoint;
+import org.osmdroid.views.overlay.TilesOverlay;
 
 public class WeatherMapActivity extends AppCompatActivity {
 
@@ -37,16 +47,19 @@ public class WeatherMapActivity extends AppCompatActivity {
 
         toolbar = findViewById(R.id.toolbar);
         back = findViewById(R.id.back);
+
         adView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        adView.loadAd(adRequest);
 
         prefs = getSharedPreferences("settings", MODE_PRIVATE);
 
-        if (prefs.getBoolean("ads_enabled", true)) {
+        /* if (prefs.getBoolean("ads_enabled", true)) {
             AdRequest adRequest = new AdRequest.Builder().build();
             adView.loadAd(adRequest);
         } else {
             adView.setVisibility(View.GONE);
-        }
+        } */
 
         sp = PreferenceManager.getDefaultSharedPreferences(WeatherMapActivity.this);
         String lastLongterm = sp.getString("lastLongterm", "");
