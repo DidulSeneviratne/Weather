@@ -28,8 +28,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.PopupWindow;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -58,6 +56,7 @@ import com.google.android.material.textfield.TextInputEditText;
 import com.izone.globalweather.Ads.MyApp;
 import com.izone.globalweather.adapter.DailyForecastAdapter;
 import com.izone.globalweather.adapter.HourlyForecastAdapter;
+import com.izone.globalweather.air_quality.MainActivity1;
 import com.izone.globalweather.api.ApiClient;
 import com.izone.globalweather.api.WeatherService;
 import com.izone.globalweather.model.ForecastResponse;
@@ -96,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((MyApp) getApplication()).appOpenAdManager.showAdIfAvailable(this);
 
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -170,7 +168,7 @@ public class MainActivity extends AppCompatActivity {
             adView.setVisibility(View.GONE);
         } */
 
-        String lang = pref.getString("lang", "hi");
+        String lang = pref.getString("lang", "en");
         setLocale(lang);
 
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
@@ -202,9 +200,9 @@ public class MainActivity extends AppCompatActivity {
             recreate(); // Recreate activity to apply theme
         });
 
-        expandButton = findViewById(R.id.expand);
+        // expandButton = findViewById(R.id.expand);
 
-        expandButton.setOnClickListener(v -> {
+        /* expandButton.setOnClickListener(v -> {
             View popupView = getLayoutInflater().inflate(R.layout.popup_menu_layout, null);
             PopupWindow popupWindow = new PopupWindow(
                     popupView,
@@ -270,6 +268,87 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(new Intent(MainActivity.this, WeatherMapActivity.class));
                 popupWindow.dismiss();
             });
+        }); */
+
+        fabLang = findViewById(R.id.fab_lang);
+        widget = findViewById(R.id.widget);
+        map = findViewById(R.id.map);
+
+        map.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, WeatherMapActivity.class));
+            }
+        });
+
+        widget.setOnClickListener(view -> {
+            // Widget logic
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                AppWidgetManager appWidgetManager = getSystemService(AppWidgetManager.class);
+                ComponentName myProvider = new ComponentName(this, WeatherWidgetProvider.class);
+
+                if (appWidgetManager.isRequestPinAppWidgetSupported()) {
+                    appWidgetManager.requestPinAppWidget(myProvider, null, null);
+                    Toast.makeText(this, "Widget available for manual adding", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(this, "Widget pinning not supported on this device", Toast.LENGTH_SHORT).show();
+                }
+            } else {
+                Toast.makeText(this, "Requires Android 8.0 or higher", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        SharedPreferences langPref = getSharedPreferences("settings", MODE_PRIVATE);
+        String currentLang = langPref.getString("lang", "en");
+        // Set next language label
+        switch (currentLang) {
+            case "en":
+                fabLang.setText("En");
+                break;
+            case "es":
+                fabLang.setText("Es");
+                break;
+            case "hi":
+                fabLang.setText("हिंदी");
+                break;
+            case "ge":
+                fabLang.setText("Ge");
+                break;
+            case "pl":
+                fabLang.setText("Pl");
+                break;
+            case "pt":
+                fabLang.setText("Pt");
+                break;
+            case "ru":
+                fabLang.setText("Ru");
+                break;
+            case "si":
+                fabLang.setText("සිං");
+                break;
+            case "tr":
+                fabLang.setText("Tr");
+                break;
+        }
+
+        fabLang.setOnClickListener(langView -> {
+            // Toggle language logic
+            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+            builder.setTitle(getString(R.string.choose_lan));
+
+            builder.setItems(supportedLangNames, (dialog, which) -> {
+                String selectedLang = supportedLangCodes[which];
+                prefs.edit().putString("lang", selectedLang).apply();
+                setAppLocale(selectedLang);
+
+                // Restart to apply
+                Intent intent = new Intent(MainActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_NEW_TASK);
+                startActivity(intent);
+                finish();
+            });
+
+            builder.show();
         });
 
         refresh = findViewById(R.id.refresh);
@@ -346,6 +425,9 @@ public class MainActivity extends AppCompatActivity {
                     builder.setNegativeButton(getString(R.string.cancel), (dialog, which) -> dialog.cancel());
                     builder.show();
                     return true;
+                } else if (id == R.id.menu_air_index) {
+                    startActivity(new Intent(MainActivity.this, MainActivity1.class));
+                    return true;
                 }
                 return false;
             });
@@ -389,6 +471,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(new Intent(MainActivity.this, WeatherMapActivity.class));
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ((MyApp) getApplication()).appOpenAdManager.showAdIfAvailable(this);
     }
 
     /* @Override
@@ -576,7 +664,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void loadNativeAd(DailyForecastAdapter adapter, RecyclerView recyclerDaily) {
-        AdLoader adLoader = new AdLoader.Builder(this, "ca-app-pub-1606200483291446/2190873399") // Replace with your real ad unit
+        AdLoader adLoader = new AdLoader.Builder(this, getString(R.string.ads_native_id)) // Replace with your real ad unit
                 .forNativeAd(nativeAd -> {
                     adapter.setNativeAd(nativeAd);// Inject into adapter
 

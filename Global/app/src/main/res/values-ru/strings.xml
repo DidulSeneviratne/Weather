@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Глобальная Погода</string>
+    <string name="app_name">Погода</string>
     <string name="city_name">Нью-Йорк</string>
     <string name="clear">Ясно</string>
     <string name="feels_like">Ощущается как</string>
@@ -10,9 +10,13 @@
     <string name="hourly_forecast">Почасовой прогноз</string>
     <string name="five_day_forecast">Прогноз на 5 дней</string>
     <string name="lang">Язык</string>
+    <string name="search_city">Найдите свой город</string>
+    <string name="air_index">Индекс воздуха</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
+    <string name="ads_native_id">ca-app-pub-1606200483291446/2190873399</string>
     <string name="settings_title_language">Язык</string>
     <string name="action_settings">RU</string>
     <string name="choose_mode">Выберите режим</string>

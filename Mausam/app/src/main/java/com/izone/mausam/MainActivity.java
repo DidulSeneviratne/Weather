@@ -98,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ((MyApp) getApplication()).appOpenAdManager.showAdIfAvailable(this);
-
         LocationManager locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
         ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
@@ -473,6 +471,12 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        ((MyApp) getApplication()).appOpenAdManager.showAdIfAvailable(this);
     }
 
     /* @Override

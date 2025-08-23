@@ -123,7 +123,7 @@ public class SettingsActivity extends AppCompatActivity {
         // Language switch logic
         btnLang.setOnClickListener(v -> {
             AlertDialog.Builder builder = new AlertDialog.Builder(SettingsActivity.this);
-            builder.setTitle(getString(R.string.enter_city_title));
+            builder.setTitle(getString(R.string.choose_lan));
 
             builder.setItems(supportedLangNames, (dialog, which) -> {
                 String selectedLang = supportedLangCodes[which];

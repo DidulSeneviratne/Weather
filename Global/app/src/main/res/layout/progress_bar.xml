@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingTop="20dp"
+    android:weightSum="5">
+
+    <!-- GOOD -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/aqi_good"
+        android:text="\nGOOD"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="10sp" />
+
+    <!-- MODERATE -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/aqi_moderate"
+        android:text="\nMODERATE"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="10sp" />
+
+    <!-- UNHEALTHY -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/aqi_unhealthy"
+        android:text="\nUNHEALTHY"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="10sp" />
+
+    <!-- VERY UNHEALTHY -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/aqi_very_unhealthy"
+        android:text="VERY\nUNHEALTHY"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="10sp" />
+
+    <!-- HAZARDOUS -->
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:background="@color/aqi_hazardous"
+        android:text="\nHAZARDOUS"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textSize="10sp" />
+
+</LinearLayout>

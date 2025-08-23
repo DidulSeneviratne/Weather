@@ -1,8 +1,11 @@
 package com.izone.globalweather.adapter;
 
+import android.util.Log;
+import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
 
@@ -129,33 +132,50 @@ public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.View
     public static class AdViewHolder extends RecyclerView.ViewHolder {
         NativeAdView nativeAdView;
 
-
         public AdViewHolder(@NonNull View itemView) {
             super(itemView);
             nativeAdView = (NativeAdView) itemView;
         }
 
-        public void bind(NativeAd ad, RecyclerView recyclerDaily) {
+        public void bind(NativeAd ad, RecyclerView recyclerView) {
             if (ad == null) return;
 
-            // Set up views based on your layout
+            // Find views
             TextView headlineView = nativeAdView.findViewById(R.id.ad_headline);
             TextView bodyView = nativeAdView.findViewById(R.id.ad_body);
             MediaView mediaView = nativeAdView.findViewById(R.id.ad_media);
+            Button callToActionView = nativeAdView.findViewById(R.id.ad_call_to_action);
 
+            // Assign headline (non-clickable)
             headlineView.setText(ad.getHeadline());
             nativeAdView.setHeadlineView(headlineView);
 
+            // Assign body (non-clickable)
             if (ad.getBody() != null) {
                 bodyView.setText(ad.getBody());
-                nativeAdView.setBodyView(bodyView);
-                nativeAdView.setMediaView(mediaView);
                 bodyView.setVisibility(View.VISIBLE);
-
+                nativeAdView.setBodyView(bodyView);
             } else {
                 bodyView.setVisibility(View.GONE);
             }
 
+            // Assign media (non-clickable)
+            nativeAdView.setMediaView(mediaView);
+
+            // Assign CTA (clickable)
+            if (ad.getCallToAction() != null) {
+                callToActionView.setText(ad.getCallToAction());
+                callToActionView.setVisibility(View.VISIBLE);
+                nativeAdView.setCallToActionView(callToActionView);
+            } else {
+                callToActionView.setVisibility(View.GONE);
+            }
+
+            // clear root clicks
+            nativeAdView.setClickable(false);
+            nativeAdView.setFocusable(false);
+
+            // Register the ad
             nativeAdView.setNativeAd(ad);
         }
     }

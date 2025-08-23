@@ -3,4 +3,9 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#EA0909</color>
+    <color name="aqi_good">#4CAF50</color>         <!-- Green -->
+    <color name="aqi_moderate">#FFEB3B</color>     <!-- Yellow -->
+    <color name="aqi_unhealthy">#FF9800</color>    <!-- Orange -->
+    <color name="aqi_very_unhealthy">#F44336</color> <!-- Red -->
+    <color name="aqi_hazardous">#7B1FA2</color>    <!-- Dark Red / Purple -->
 </resources>

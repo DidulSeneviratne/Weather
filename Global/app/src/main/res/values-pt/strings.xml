@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Clima Global</string>
+    <string name="app_name">Clima</string>
     <string name="city_name">Nova Iorque</string>
     <string name="clear">Limpo</string>
     <string name="feels_like">Sensação térmica</string>
@@ -10,9 +10,13 @@
     <string name="hourly_forecast">Previsão horária</string>
     <string name="five_day_forecast">Previsão de 5 dias</string>
     <string name="lang">Idioma</string>
+    <string name="search_city">Pesquise sua cidade</string>
+    <string name="air_index">Índice de Ar</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
+    <string name="ads_native_id">ca-app-pub-1606200483291446/2190873399</string>
     <string name="settings_title_language">Idioma</string>
     <string name="action_settings">PT</string>
     <string name="choose_mode">Escolha um modo</string>

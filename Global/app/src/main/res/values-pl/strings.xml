@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pogoda Globalna</string>
+    <string name="app_name">Pogoda</string>
     <string name="city_name">Nowy Jork</string>
     <string name="clear">Bezchmurnie</string>
     <string name="feels_like">Odczuwalna</string>
@@ -10,9 +10,13 @@
     <string name="hourly_forecast">Prognoza godzinowa</string>
     <string name="five_day_forecast">Prognoza 5-dniowa</string>
     <string name="lang">Język</string>
+    <string name="search_city">Wyszukaj swoje miasto</string>
+    <string name="air_index">Indeks powietrza</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
+    <string name="ads_native_id">ca-app-pub-1606200483291446/2190873399</string>
     <string name="settings_title_language">Język</string>
     <string name="action_settings">PL</string>
     <string name="choose_mode">Wybierz tryb</string>
