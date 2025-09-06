@@ -42,6 +42,7 @@
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Search Card -->
+    <!-- Search Card -->
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -49,13 +50,29 @@
         app:cardCornerRadius="5dp"
         app:cardElevation="5dp">
 
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/newwi"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:iconifiedByDefault="false"
-            app:queryHint="@string/search_city"/>
+            android:orientation="vertical"
+            android:padding="8dp">
 
+            <!-- Border Title -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/search_city_air_index"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:textColor="@color/red"/>
+
+            <!-- SearchView -->
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/newwi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:iconifiedByDefault="false"
+                app:queryHint="@string/search_city"/>
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
     <!-- Scrollable Content -->

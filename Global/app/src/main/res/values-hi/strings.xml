@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">मौसम</string>
+    <string name="title">मौसम</string>
     <string name="city_name">न्यूयॉर्क</string>
     <string name="clear">साफ</string>
     <string name="feels_like">ऐसा लगता है</string>
@@ -11,7 +11,9 @@
     <string name="five_day_forecast">5-दिवसीय पूर्वानुमान</string>
     <string name="lang">लैंग</string>
     <string name="search_city">अपना शहर खोजें</string>
+    <string name="search_city_air_index">शहर की वायु गुणवत्ता</string>
     <string name="air_index">वायु सूचकांक</string>
+    <string name="air_index_menu">वायु गुणवत्ता सूचकांक</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
@@ -33,7 +35,7 @@
     <string name="unit_metric">मेट्रिक (°C, m/s)</string>
     <string name="unit_imperial">इम्पीरियल (°F, mph)</string>
 
-    <string name="title">वैश्विक मौसम</string>
+    <string name="app_name">वैश्विक मौसम</string>
     <string name="setting">सेटिंग्स</string>
     <string name="weather">मौसम मानचित्र</string>
     <string name="widget">विजेट जोड़ें</string>

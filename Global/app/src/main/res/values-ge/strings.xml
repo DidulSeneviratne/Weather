@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Wetter</string>
+    <string name="title">Wetter</string>
     <string name="city_name">New York</string>
     <string name="clear">Klar</string>
     <string name="feels_like">Gefühlt</string>
@@ -11,7 +11,9 @@
     <string name="five_day_forecast">5-Tage-Vorhersage</string>
     <string name="lang">Sprache</string>
     <string name="search_city">Durchsuchen Sie Ihre Stadt</string>
+    <string name="search_city_air_index">Luftqualität der Stadt</string>
     <string name="air_index">Luftindex</string>
+    <string name="air_index_menu">Luftqualitätsindex</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
@@ -33,7 +35,7 @@
     <string name="unit_metric">Metrisch (°C, m/s)</string>
     <string name="unit_imperial">Imperial (°F, mph)</string>
 
-    <string name="title">Globales Wetter</string>
+    <string name="app_name">Globales Wetter</string>
     <string name="setting">Einstellungen</string>
     <string name="weather">Wetterkarte</string>
     <string name="widget">Widget hinzufügen</string>

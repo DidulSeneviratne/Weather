@@ -48,7 +48,7 @@ public class PollutionModel {
     }
 
 
-    class list {
+    public class list {
         public PollutionModel.list.main getMain() {
             return main;
         }
@@ -82,7 +82,7 @@ public class PollutionModel {
             this.dt = dt;
         }
 
-        class main {
+        public class main {
             public int getAqi() {
                 return aqi;
             }
@@ -95,7 +95,7 @@ public class PollutionModel {
         }
 
 
-        class components {
+        public class components {
             double co;
             double no;
             double no2;

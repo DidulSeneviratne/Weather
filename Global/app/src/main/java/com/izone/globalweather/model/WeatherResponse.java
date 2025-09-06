@@ -4,6 +4,8 @@ import com.google.gson.annotations.SerializedName;
 import java.util.List;
 
 public class WeatherResponse {
+    public Coord coord;
+
     @SerializedName("main")
     public Main main;
 
@@ -20,6 +22,11 @@ public class WeatherResponse {
         public double temp;
         @SerializedName("feels_like")
         public double feels_like;
+    }
+
+    public static class Coord {
+        public double lon;
+        public double lat;
     }
 
     public class Weather {

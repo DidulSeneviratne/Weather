@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Clima</string>
+    <string name="title">Clima</string>
     <string name="city_name">Nueva York</string>
     <string name="clear">Despejado</string>
     <string name="feels_like">Sensación térmica</string>
@@ -11,7 +11,9 @@
     <string name="five_day_forecast">Pronóstico de 5 días</string>
     <string name="lang">Idioma</string>
     <string name="search_city">Busca tu ciudad</string>
+    <string name="search_city_air_index">Calidad del aire de la ciudad</string>
     <string name="air_index">Índice de aire</string>
+    <string name="air_index_menu">Índice de calidad del aire</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
@@ -33,7 +35,7 @@
     <string name="unit_metric">Métrico (°C, m/s)</string>
     <string name="unit_imperial">Imperial (°F, mph)</string>
 
-    <string name="title">Clima Global</string>
+    <string name="app_name">Clima Global</string>
     <string name="setting">Configuración</string>
     <string name="weather">Mapa del clima</string>
     <string name="widget">Agregar widget</string>

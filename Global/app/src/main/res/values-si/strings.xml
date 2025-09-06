@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">කාලගුණය</string>
+    <string name="title">කාලගුණය</string>
     <string name="city_name">නිව්යෝක්</string>
     <string name="clear">පැහැදිලි</string>
     <string name="feels_like">අනූවේ දැනෙන්නෙ</string>
@@ -11,7 +11,9 @@
     <string name="five_day_forecast">දින 5ක පුරෝකථනය</string>
     <string name="lang">භාෂාව</string>
     <string name="search_city">ඔබේ නගරය සොයන්න</string>
+    <string name="search_city_air_index">නගරයේ වාතයේ ගුණාත්මකභාවය</string>
     <string name="air_index">වායු දර්ශකය</string>
+    <string name="air_index_menu">වායු තත්ත්ව දර්ශකය</string>
 
     <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
     <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
@@ -33,7 +35,7 @@
     <string name="unit_metric">මැට්‍රික් (°C, m/s)</string>
     <string name="unit_imperial">ඉම්පීරියල් (°F, mph)</string>
 
-    <string name="title">ගෝලීය කාලගුණය</string>
+    <string name="app_name">ගෝලීය කාලගුණය</string>
     <string name="setting">සැකසුම්</string>
     <string name="weather">කාලගුණ සිතියම</string>
     <string name="widget">විජට් එකක් එකතු කරන්න</string>

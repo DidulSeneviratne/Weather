@@ -254,10 +254,12 @@ public class MainActivity1 extends AppCompatActivity {
             progressBar.getProgressDrawable().setColorFilter(Color.GREEN, PorterDuff.Mode.SRC_IN);
         } else if (scaledValue <= 100) {
             progressBar.getProgressDrawable().setColorFilter(Color.YELLOW, PorterDuff.Mode.SRC_IN);
+            //Toast.makeText(this, String.valueOf(scaledValue), Toast.LENGTH_SHORT).show();
         } else if (scaledValue <= 150) {
             progressBar.getProgressDrawable().setColorFilter(Color.parseColor("#FFA500"), PorterDuff.Mode.SRC_IN);
         } else if (scaledValue <= 200) {
             progressBar.getProgressDrawable().setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN);
+            //Toast.makeText(this, String.valueOf(scaledValue), Toast.LENGTH_SHORT).show();
         } else if (scaledValue <= 300) {
             progressBar.getProgressDrawable().setColorFilter(Color.MAGENTA, PorterDuff.Mode.SRC_IN);
         } else {

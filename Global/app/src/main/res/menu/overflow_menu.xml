@@ -18,6 +18,6 @@
         android:icon="@android:drawable/ic_menu_search"/>
     <item
         android:id="@+id/menu_air_index"
-        android:title="@string/air_index"
+        android:title="@string/air_index_menu"
         android:icon="@android:drawable/ic_menu_search"/>
 </menu>
