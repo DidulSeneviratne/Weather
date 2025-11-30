@@ -1,7 +1,7 @@
-package com.izone.mausam.api;
+package com.universl.hindiweather.api;
 
-import com.izone.mausam.model.ForecastResponse;
-import com.izone.mausam.model.WeatherResponse;
+import com.universl.hindiweather.model.ForecastResponse;
+import com.universl.hindiweather.model.WeatherResponse;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;

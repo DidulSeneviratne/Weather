@@ -1,4 +1,4 @@
-package com.izone.mausam.adapter;
+package com.universl.hindiweather.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.izone.mausam.R;
-import com.izone.mausam.model.ForecastResponse;
+import com.universl.hindiweather.R;
+import com.universl.hindiweather.model.ForecastResponse;
 
 import java.util.List;
 

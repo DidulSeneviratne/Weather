@@ -1,4 +1,4 @@
-package com.izone.mausam.Ads;
+package com.universl.hindiweather.Ads;
 
 import android.app.Activity;
 import android.app.Application;
@@ -9,7 +9,7 @@ import com.google.android.gms.ads.AdError;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.appopen.AppOpenAd;
-import com.izone.mausam.R;
+import com.universl.hindiweather.R;
 
 import java.util.Date;
 

@@ -1,4 +1,4 @@
-package com.izone.mausam;
+package com.universl.hindiweather;
 
 import android.Manifest;
 import android.app.PendingIntent;
@@ -12,7 +12,6 @@ import android.graphics.BitmapFactory;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.AsyncTask;
-import android.util.Log;
 import android.widget.RemoteViews;
 
 import androidx.core.content.ContextCompat;

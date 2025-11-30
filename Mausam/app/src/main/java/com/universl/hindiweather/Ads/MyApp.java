@@ -1,4 +1,4 @@
-package com.izone.mausam.Ads;
+package com.universl.hindiweather.Ads;
 
 import android.app.Application;
 import com.google.android.gms.ads.MobileAds;

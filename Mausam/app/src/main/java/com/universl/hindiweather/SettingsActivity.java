@@ -1,9 +1,7 @@
-package com.izone.mausam;
+package com.universl.hindiweather;
 
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -11,7 +9,6 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 import android.content.res.Configuration;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import androidx.appcompat.widget.Toolbar;
@@ -19,7 +16,6 @@ import androidx.appcompat.widget.Toolbar;
 import java.util.Locale;
 
 import android.content.Intent;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;

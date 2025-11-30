@@ -1,4 +1,4 @@
-package com.izone.mausam;
+package com.universl.hindiweather;
 
 import android.content.Context;
 

@@ -1,4 +1,4 @@
-package com.izone.mausam.api;
+package com.universl.hindiweather.api;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

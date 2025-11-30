@@ -1,4 +1,4 @@
-package com.izone.mausam.model;
+package com.universl.hindiweather.model;
 
 import com.google.gson.annotations.SerializedName;
 import java.util.List;

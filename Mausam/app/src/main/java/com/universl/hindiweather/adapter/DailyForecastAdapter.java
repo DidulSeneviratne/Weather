@@ -1,14 +1,12 @@
-package com.izone.mausam.adapter;
+package com.universl.hindiweather.adapter;
 
-import android.util.Log;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ImageView;
-import java.util.ArrayList;
+
 import java.util.List;
 
 import androidx.annotation.NonNull;
@@ -18,12 +16,11 @@ import com.bumptech.glide.Glide;
 import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdView;
-import com.izone.mausam.R;
-import com.izone.mausam.model.ForecastResponse;
+import com.universl.hindiweather.R;
+import com.universl.hindiweather.model.ForecastResponse;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.List;
 import java.util.Locale;
 
 public class DailyForecastAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {

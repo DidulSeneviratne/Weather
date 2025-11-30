@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.izone.mausam">
+    package="com.universl.hindiweather">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -42,11 +42,11 @@
         </activity>
 
         <activity
-            android:name="com.izone.mausam.WeatherMapActivity"
+            android:name=".WeatherMapActivity"
             android:exported="false" />
 
         <activity
-            android:name="com.izone.mausam.SettingsActivity"
+            android:name=".SettingsActivity"
             android:exported="false" />
 
         <meta-data
