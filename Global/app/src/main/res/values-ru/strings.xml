@@ -15,10 +15,10 @@
     <string name="air_index">Индекс воздуха</string>
     <string name="air_index_menu">Индекс качества воздуха</string>
 
-    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
-    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
-    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
-    <string name="ads_native_id">ca-app-pub-1606200483291446/2190873399</string>
+    <string name="ads_app_id">ca-app-pub-1606200483291446~7679480122</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/6103492810</string>
+    <string name="ads_native_id">ca-app-pub-1606200483291446/6274899119</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/2379902045</string>
     <string name="settings_title_language">Язык</string>
     <string name="action_settings">RU</string>
     <string name="choose_mode">Выберите режим</string>

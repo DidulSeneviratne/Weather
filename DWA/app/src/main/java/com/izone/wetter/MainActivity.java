@@ -318,7 +318,7 @@ public class MainActivity extends AppCompatActivity {
             case "en":
                 fabLang.setText("Deutsch");
                 break;
-            case "ge":
+            case "de":
                 fabLang.setText("English");
                 break;
         }
@@ -327,8 +327,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String nextLang;
                 switch (currentLang) {
-                    case "en": nextLang = "ge"; break;
-                    case "ge": default: nextLang = "en"; break;
+                    case "en": nextLang = "de"; break;
+                    case "de": default: nextLang = "en"; break;
                 }
 
                 langPref.edit().putString("lang", nextLang).apply();
@@ -461,7 +461,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         btnLang.setOnClickListener(view -> {
-            String newLang = lang.equals("en") ? "ge" : "en";
+            String newLang = lang.equals("en") ? "de" : "en";
             prefs.edit().putString("lang", newLang).apply();
 
             setAppLocale(newLang);

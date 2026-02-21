@@ -13,10 +13,10 @@
     <string name="language">Language</string>
     <string name="map">Map</string>
 
-    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
-    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
-    <string name="ads_native">ca-app-pub-1606200483291446/2190873399</string>
-    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
+    <string name="ads_app_id">ca-app-pub-1606200483291446~4728619394</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/3845415589</string>
+    <string name="ads_native">ca-app-pub-1606200483291446/2308972633</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/7254371072</string>
     <string name="settings_title_language">Language</string>
     <string name="action_settings">EN</string>
     <string name="choose_mode">Choose a Mode</string>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="modes">
+        <item name="normal">Normal</item>
+        <item name="standard">Standard</item>
+        <item name="telescope">Teleskop</item>
+        <item name="night">Nacht</item>
+        <item name="digital">Digital</item>
+        <item name="map">Karte</item>
+        <item name="map_satellite">Satellitenkarte</item>
+    </string-array>
+
+    <string-array name="languages">
+        <item name="en">English</item>
+        <item name="de">German</item>
+    </string-array>
+
+    <string-array name="lancodes">
+        <item>en</item>
+        <item>de</item>
+    </string-array>
+
+</resources>

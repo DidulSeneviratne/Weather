@@ -15,10 +15,10 @@
     <string name="air_index">Índice de Ar</string>
     <string name="air_index_menu">Índice de Qualidade do Ar</string>
 
-    <string name="ads_app_id">ca-app-pub-1606200483291446~5730663155</string>
-    <string name="ads_banner_id">ca-app-pub-1606200483291446/5984462953</string>
-    <string name="ads_open">ca-app-pub-1606200483291446/9280424726</string>
-    <string name="ads_native_id">ca-app-pub-1606200483291446/2190873399</string>
+    <string name="ads_app_id">ca-app-pub-1606200483291446~7679480122</string>
+    <string name="ads_banner_id">ca-app-pub-1606200483291446/6103492810</string>
+    <string name="ads_native_id">ca-app-pub-1606200483291446/6274899119</string>
+    <string name="ads_open">ca-app-pub-1606200483291446/2379902045</string>
     <string name="settings_title_language">Idioma</string>
     <string name="action_settings">PT</string>
     <string name="choose_mode">Escolha um modo</string>

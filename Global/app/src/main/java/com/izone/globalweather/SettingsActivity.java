@@ -31,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
     ImageButton back;
     SharedPreferences prefs;
     AdView adView;
-    private final String[] supportedLangCodes = {"en", "es", "hi", "ge", "pl", "pt", "ru", "si", "tr"};
+    private final String[] supportedLangCodes = {"en", "es", "hi", "de", "pl", "pt", "ru", "si", "tr"};
     private final String[] supportedLangNames = {"English", "Spanish", "Hindi", "German", "Polish", "Portuguese", "Russian", "Sinhala", "Turkish"};
 
     @Override

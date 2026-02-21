@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
     private RecyclerView recyclerView;
     private final static int REQUEST_CODE = 100;
     List<PollutionModel> PollutionList = new ArrayList<>();
-    private final String[] supportedLangCodes = {"en", "es", "hi", "ge", "pl", "pt", "ru", "si", "tr"};
+    private final String[] supportedLangCodes = {"en", "es", "hi", "de", "pl", "pt", "ru", "si", "tr"};
     private final String[] supportedLangNames = {"English", "Spanish", "Hindi", "German", "Polish", "Portuguese", "Russian", "Sinhala", "Turkish"};
 
     @Override
@@ -425,7 +425,7 @@ public class MainActivity extends AppCompatActivity {
             case "hi":
                 fabLang.setText("हिंदी");
                 break;
-            case "ge":
+            case "de":
                 fabLang.setText("Ge");
                 break;
             case "pl":

@@ -14,7 +14,7 @@
         <item name="en">English</item>
         <item name="es">Spanish</item>
         <item name="hi">Hindi</item>
-        <item name="ge">German</item>
+        <item name="de">German</item>
         <item name="pl">Polish</item>
         <item name="pt">Portuguese</item>
         <item name="ru">Russian</item>
@@ -26,7 +26,7 @@
         <item>en</item>
         <item>es</item>
         <item>hi</item>
-        <item>ge</item>
+        <item>de</item>
         <item>pl</item>
         <item>pt</item>
         <item>ru</item>
